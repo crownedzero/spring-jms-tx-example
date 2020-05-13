@@ -1,0 +1,11 @@
+spring:
+
+  application.name: '@project.artifactId@'
+
+  jms:
+    pub-sub-domain: false
+    template.default-destination: 'order.queue'
+
+  main.banner-mode: 'off'
+
+  activemq.broker-url: 'vm://embedded?broker.persistent=false&jms.redeliveryPolicy.maximumRedeliveries=1'

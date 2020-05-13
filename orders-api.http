@@ -1,0 +1,31 @@
+### orders::sendOrders()
+### [VALID_ORDER|PREPROCESS_FAILURE|POSTPROCESS_FAILURE]
+POST http://localhost:8080/orders
+Content-Type: application/json
+
+[
+  {
+    "ref_id": "3ca451a3-5cdd-427c-b274-d1d68205f4f6",
+    "state": "VALID_ORDER"
+  },
+  {
+    "ref_id": "6244177d-41de-4624-8fe3-dd68300c3908",
+    "state": "VALID_ORDER"
+  },
+  {
+    "ref_id": "7c94e3b8-9635-445f-bdc0-95bb8cb18193",
+    "state": "VALID_ORDER"
+  }
+]
+
+
+### orders::getOrders()
+GET http://localhost:8080/orders
+Accept: application/json
+
+### orders::deleteAllOrders()
+DELETE http://localhost:8080/orders
+
+### orders::getOrders()
+GET http://localhost:8080/orders/count
+Accept: application/json
